@@ -1,0 +1,36 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - MXCache (0.1.0):
+    - FMDB (= 2.7.5)
+    - MXGCDQueuePool (= 0.1.0)
+    - MXLRU (= 0.1.0)
+  - MXGCDQueuePool (0.1.0)
+  - MXLRU (0.1.0)
+
+DEPENDENCIES:
+  - FMDB (= 2.7.5)
+  - MXCache (from `../`)
+  - MXGCDQueuePool (= 0.1.0)
+  - MXLRU (= 0.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - MXGCDQueuePool
+    - MXLRU
+
+EXTERNAL SOURCES:
+  MXCache:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  MXCache: bcf4aa8488eed5481c364cc9f9811cf581b18533
+  MXGCDQueuePool: 660185f42a4b645f8a12d51ff60d8ed8042c1789
+  MXLRU: 2ca53d240f6ecf8da3c92700a036dea12ef2745f
+
+PODFILE CHECKSUM: d47940d66cc2894448029dc934bacb8f9b87afa1
+
+COCOAPODS: 1.5.3

@@ -2,8 +2,12 @@ use_frameworks!
 
 platform :ios, '8.0'
 
+source 'https://github.com/CocoaPods/Specs.git'
 target 'MXCache_Example' do
   pod 'MXCache', :path => '../'
+  pod 'FMDB', '2.7.5'
+  pod 'MXLRU', '0.1.0'
+  pod 'MXGCDQueuePool', '0.1.0'
 
   target 'MXCache_Tests' do
     inherit! :search_paths

@@ -1,0 +1,6 @@
+framework module MXLRU {
+  umbrella header "MXLRU-umbrella.h"
+
+  export *
+  module * { export * }
+}

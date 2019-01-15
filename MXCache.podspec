@@ -9,34 +9,23 @@
 Pod::Spec.new do |s|
   s.name             = 'MXCache'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MXCache.'
+  s.summary          = 'OS 内置缓存系统支持磁盘、内存缓存，LRU淘汰算法，基于活跃CPU核心数的多线程支持'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    s.description      = <<-DESC
+                         iOS 内置缓存系统支持磁盘、内存缓存，LRU淘汰算法，基于活跃CPU核心数的多线程支持
                        DESC
 
-  s.homepage         = 'https://github.com/xuvw/MXCache'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/xuvw/MXCache.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'xuvw' => 'smileshitou@hotmail.com' }
+  s.author           = { 'heke' => 'smileshitou@hotmail.com' }
   s.source           = { :git => 'https://github.com/xuvw/MXCache.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MXCache/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'MXCache' => ['MXCache/Assets/*.png']
-  # }
+  s.dependency 'FMDB', '2.7.5'
+  s.dependency 'MXLRU', '0.1.0'
+  s.dependency 'MXGCDQueuePool', '0.1.0'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

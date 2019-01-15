@@ -1,0 +1,6 @@
+framework module Pods_MXCache_Tests {
+  umbrella header "Pods-MXCache_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

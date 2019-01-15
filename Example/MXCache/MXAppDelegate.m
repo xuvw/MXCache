@@ -8,11 +8,31 @@
 
 #import "MXAppDelegate.h"
 
+@import MXCache;
+
+@interface MXAppDelegate ()
+
+@property (nonatomic, strong) MXCache *cache;
+
+@end
+
 @implementation MXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSString *cachePath = [MXSandBox documentPath];
+    cachePath = [cachePath stringByAppendingPathComponent:@"mxCache"];
+    _cache = [MXCache cacheWithPath:cachePath];
+    
+    NSString *dataStr = @"abc";
+    NSData *data = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
+    [_cache saveDataForKey:data forKey:dataStr];
+    
+    NSData *dataFromCache = [_cache dataForKey:dataStr];
+    NSString *strFromCache = [[NSString alloc] initWithData:dataFromCache encoding:NSUTF8StringEncoding];
+    NSLog(@"dataFromCahe:%@",strFromCache);
+    
     return YES;
 }
 
